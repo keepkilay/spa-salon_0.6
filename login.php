@@ -1,5 +1,5 @@
 <?php error_reporting(0)?>
-<?if($_COOKIE['user'] == 'true') header('location: /spa-salon4')?>
+<?require_once ("functions.php");?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

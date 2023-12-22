@@ -1,37 +1,37 @@
 <?php 
 require_once ("functions.php");
-    // $userData = [
-    //  'email'=>'aboba@hui.su',
-    //  'password'=>'1q2w3e4r'
-    // ];
     $errors = [];
-    $login = trim($_POST['email']);
+    $login = trim($_POST['login']);
     $password = trim($_POST['pass']);
+
 
     if(empty($login) || empty($password))
     {
-        echo $errors[] = 'Заполни все поля';
+        $errors[] = 'Заполни все поля';
     }
-    if($login != $getUserList['login'] && $password != $getUserList['password']) //возможно вместо getUsersList,
-                                                                                   //будет $userData
-    {
-        echo $errors[] = 'Неверный логин или пароль';
+    $findUser = false;
+    foreach($list as $user){
+        if($user['login']==$login && md5($password) == $user['password']){
+            $findUser = $user['login'];
+        }
     }
-    // if(empty($errors))
-    // {   
-    //     setcookie('user', 'true', time() + 3600, '/spa-salon4',);
-            
-    // }
-    if ($_COOKIE['user'] == 'true'){
-        setcookie('user', 'true', time() - 3600, '/');
+   
+    if($findUser == false){
+        $errors[] = 'Неверный логин или пароль';
+    }
+ 
+
+    if(empty($errors) && $findUser){
+        $_SESSION['user'] = $findUser;
+        sleep(2);
+    
+        header('location:/');
     }else{
-        setcookie('user', 'true', time() + 3600, '/');
+        foreach($errors as $error){
+            echo $error."<br>";
+        }
     }
-    foreach($errors as $error){
-        echo $error."<br>";
-    }
-    sleep(2);
-    header('location:/spa-salon4');
+  
 
 
     

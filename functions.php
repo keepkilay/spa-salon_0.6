@@ -1,14 +1,25 @@
 <?php
 session_start();
+
+// function pre($val){
+//     echo '<pre>';
+//     print_r($val);
+//     echo '</pre>';
+// }
+
+if($_GET['exit']=='Y'){
+    unset($_SESSION['user']);
+}
+
     //1.Для начала создайте несколько полезных функций и выделите их в отдельный файл:
 function getUsersList() { //1) Функция, которая возвращает массив всех пользователей и хэш паролей
     return
     [
-        ['login' => 'Петя', 'password' => '$2y$10$uYa/0Jyv/btDSVSQKJ3eg.YA1dSmYj3Mzf9LIh4rR.v3rCJGhrCBy'],//123 - пароль и хэш
-        ['login' => 'Алексей', 'password' => '$2y$10$Yd71HHyKqNV/1EJybM3kB.xYIlBPJ5vVGYDeTXT8MMjqfXP9hgiEq'],//345
-        ['login' => 'Андрей', 'password' => '$2y$10$AzlC.eOJaZ5KGADoXTSvaeX1aZ/8P/WILYsHoiWRgRog3.ProOpnG'],//567
-        ['login' => 'Вася', 'password' => '$2y$10$689N6dAPVsJ.0zG3klxZju7IBaOIGmMMf8XgA29pfrEHW6jFqsc2e'],//789
-        ['login' => 'Анна', 'password' => '$2y$10$82MtEEUp78xnstnj0xEoGO4GGRGb4bvA324AQWFTYv8EUia/cN7fS'],//891
+        ['login' => 'Петя', 'password' => '202cb962ac59075b964b07152d234b70'],//123 - пароль и хэш
+        ['login' => 'Алексей', 'password' => 'd81f9c1be2e08964bf9f24b15f0e4900'],//345
+        ['login' => 'Андрей', 'password' => '99c5e07b4d5de9d18c350cdf64c5aa3d'],//567
+        ['login' => 'Вася', 'password' => '68053af2923e00204c3ca7c6a3150cf7'],//789
+        ['login' => 'Анна', 'password' => 'cfbce4c1d7c425baf21d6b6f2babe6be'],//891
     ];
 }
 
@@ -44,4 +55,6 @@ function getCurrentUser(){
         return null;
     }
 }
+
+
 
