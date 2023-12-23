@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>PHP веб-сайт "Спокойствие"</title>
 </head>
 
@@ -70,14 +70,14 @@
     </div>
     <div class="bg-body-tertiary bottom-50 p-5 rounded col-lg-12 mt-5 text-center">
       <h1>Индивидуальная акция!</h1><hr>
-      <p class="lead">Новым клиентам нашего Спа-Салона "Спокойствие" действует АКЦИЯ на скидку 20%!</p>
-      <p class="lead">Для участия в акции необходимо купить абонемент на любой вид массажа от 4500 руб.</p>
-      <h3>До конца АКЦИИ осталось:</h3><hr>
+      <p class="lead"><strong>Новым клиентам нашего Спа-Салона "Спокойствие" действует АКЦИЯ на скидку</strong> <h2>35%</h2></p>
+      <p class="lead"><strong>Для участия в акции необходимо купить абонемент на любой вид массажа от 4500 руб.</strong></p>
+      <h4>До конца АКЦИИ осталось:</h4><hr>
       <div id="group">
-        <span id="d" class="badge badge-success mr-3 p-3"></span>
-        <span id="h" class="badge badge-success p-3 mr-3"></span>
-        <span id="m" class="badge badge-success mr-3 p-3"></span>
-        <span id="s" class="badge badge-success p-3"></span>
+        <span id="d" class="badge badge-success mr-3 p-3 fs-3"></span>
+        <span id="h" class="badge badge-success p-3 mr-3 fs-3"></span>
+        <span id="m" class="badge badge-success mr-3 p-3 fs-3"></span>
+        <span id="s" class="badge badge-success p-3 fs-3"></span>
       </div>
     </div>
     <br><br>
